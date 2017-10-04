@@ -5,7 +5,7 @@ Since the field of remote sensing is so wide spread but is lacking information o
 ### Introduction
 Remote sensing is getting information about an object without physically touching an object. Since it is a field of study we can find remote sensing in different uses from medical i.e. MRI to geography i.e. urban planning.
 
-The main focus of remote sensing is geography which studies the satellite images or airplane. There are various satellites which can capture different wave lengths using different sensors at different resolution. In general there are two types of images captured by satellites high resolution https://www.satimagingcorp.com/satellite-sensors/ and medium resolution https://www.satimagingcorp.com/satellite-sensors/other-satellite-sensors/ , each type having different application.
+The main focus of remote sensing is geography which studies the satellite images or airplane. There are various satellites which can capture different wave lengths using different sensors at different resolution. In general there are two types of images captured by satellites high resolution <https://www.satimagingcorp.com/satellite-sensors/> and medium resolution <https://www.satimagingcorp.com/satellite-sensors/other-satellite-sensors/> , each type having different application.
 
 
 ### Landsat 
@@ -21,7 +21,21 @@ But other websites are also available like https://search.earthdata.nasa.gov/sea
 Depending on the chosen language the image which is stored in TIFF format can be read with various libraries: for C / C++ I've used http://www.libtiff.org/ , for Python  http://www.pythonware.com/products/pil/ Python Imaging Library should do the trick. After reading and storing the header of the TIFF and the data the only thing remaining is to process the pixels.
 
 ### NDVI
-To compute the Normalized Difference Vegetation Index (NDVI) two TIFF images are required from the Landsat data set: Band 3 - Red	0.63 - 0.69	Discriminates vegetation slopes Band 4 - Near Infrared	0.77 - 0.90	Emphasizes biomass content and shorelineshttps://www.gisresources.com/ndvi-ndbi-ndwi-ranges-1-1/
+To compute the Normalized Difference Vegetation Index (NDVI) two TIFF images are required from the Landsat data set: Band 3 - Red	0.63 - 0.69	Discriminates vegetation slopes Band 4 - Near Infrared	0.77 - 0.90	Emphasizes biomass content and shorelines https://www.gisresources.com/ndvi-ndbi-ndwi-ranges-1-1/
+
+A python guide on how to compute NDVI using python and as input Landsat image can be found at PyDataNYC2014 https://nbviewer.jupyter.org/github/HyperionAnalytics/PyDataNYC2014/blob/master/ndvi_calculation.ipynb
+
+For Landsat 5 or 7 a guide that uses ArcMap and goes to the process of computing ToA if you use Level1 images can be found at http://www.pikapartners.org/DH.php?WC=/WS/ColoradoView/TutorialsDownloads/CO_RS_Tutorial10.html
+
+### Output
+
+We will end with one funky colored raster, an a use could be comparing two outputs to see how the deforestation over time evolved.
+
 ### Remote sensing
 
 Feel free to contribute!
+
+### Other
+* https://gist.github.com/jacquestardie/0d1c0cb413b3b9b06edf
+* https://www.cs.uaf.edu/2007/spring/cs481/lecture/03_29_fft_image.html
+* http://yceo.yale.edu/how-convert-landsat-dns-top-atmosphere-toa-reflectance
